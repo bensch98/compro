@@ -1,1 +1,1 @@
-# gkickstart
+# Google Kickstart Coding Competitions
