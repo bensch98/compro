@@ -6,8 +6,8 @@ for i in range(1, T+1):
   l.append({})
   for _ in range(cases):
     p1, p2 = input().split()
-    j, k = 0, 1
-    while j < k:
+    j, k = 0, len(l)-1
+    while j <= k:
       d = l[j]
       if p1 not in d and p2 not in d:
         d2 = d.copy()
