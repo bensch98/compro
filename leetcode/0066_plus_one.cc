@@ -5,7 +5,7 @@ using namespace std;
 
 class Solution {
 public:
-  vector<int> plus_one_1(vector<int> &digits) {
+  vector<int> plus_one(vector<int> &digits) {
     if (digits.size() == 0) return digits;
     
     for (vector<int>::reverse_iterator rit = digits.rbegin(); rit != digits.rend(); ++rit) {
@@ -22,7 +22,7 @@ public:
     return digits;
   }
 
-  vector<int> plus_one(vector<int> &digits) {
+  vector<int> plus_one_1(vector<int> &digits) {
     if (digits.size() == 0) return digits;
     int carry_over = 1;
     for (vector<int>::reverse_iterator rit = digits.rbegin(); rit != digits.rend(); ++rit) {
