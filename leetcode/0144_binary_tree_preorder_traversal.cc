@@ -33,17 +33,17 @@ public:
     return v;
   }
 
+  vector<int> v;
   vector<int> preorder_traversal_1(TreeNode *root) {
-    vector<int> v = {};
-    vector<int> tmp;
-    if (root) {
-      v.push_back(root->val);
-      tmp = preorder_traversal(root->left);
-      v.insert(v.end(), tmp.begin(), tmp.end());
-      tmp = preorder_traversal(root->right);
-      v.insert(v.end(), tmp.begin(), tmp.end());
-    }
+    preorder(root);
     return v;
+  }
+
+  void preorder(TreeNode *root) {
+    if (!root) return;
+    v.push_back(root->val);
+    preorder(root->left);
+    preorder(root->right);
   }
 };
 
