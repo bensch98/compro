@@ -7,7 +7,7 @@ import (
 func twoSum(nums []int, target int) []int {
 	num2idx := make(map[int]int)
 	var search int
-	for i, num := range(nums) {
+	for i, num := range nums {
 		search = target - num
 		if val, ok := num2idx[search]; ok {
 			return []int{i, val}
