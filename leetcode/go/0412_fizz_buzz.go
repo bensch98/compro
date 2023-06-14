@@ -6,16 +6,16 @@ import (
 )
 
 func fizzBuzz(n int) []string {
-	s := make([]string, n+1)
+	s := make([]string, n)
 	for i := 1; i <= n; i++ {
 		if i%5 == 0 && i%3 == 0 {
-			s[i] = "FizzBuzz"
+			s[i-1] = "FizzBuzz"
 		} else if i%3 == 0 {
-			s[i] = "Fizz"
+			s[i-1] = "Fizz"
 		} else if i%5 == 0 {
-			s[i] = "Buzz"
+			s[i-1] = "Buzz"
 		} else {
-			s[i] = strconv.Itoa(i)
+			s[i-1] = strconv.Itoa(i)
 		}
 	}
 	return s
